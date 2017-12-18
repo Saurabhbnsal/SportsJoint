@@ -7,12 +7,19 @@ We also publish multi-media and inforgaphics including videos and posters.
 
 Reach out us at 
 Wordpress: https://sportsjoint.blog/
+<br>
 Facebook : https://www.facebook.com/sportsjoint
+<br>
 YouTube: https://www.youtube.com/channel/UCEO-NSwm15RPSEMIlFPEARA
+<br>
 Twitter: https://twitter.com/Sports_Joint
+<br>
 Instagram: https://www.instagram.com/sportsjoint/
+<br>
 Quora: https://sportsjoint.quora.com/
+<br>
 Medium: https://medium.com/@sportsjoint1
+<br>
 
 
 
