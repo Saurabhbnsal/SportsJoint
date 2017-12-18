@@ -3,7 +3,7 @@ SportsJoint(https://sportsjoint.blog/) is a sports blog run by a team of highly 
 
 SportsJoint is a globally-followed blog and is exponentially growing in every aspect, be it viewers, readers, followers and fans.
 We provide the world with the lastest news and updates direct from the sports arena in the form of editorials, blogs, articles.
-We also publish multi-media and inforgaphics including videos and posters.
+We also publish multi-media and infographics including videos and posters.
 
 Reach out us at 
 Wordpress: https://sportsjoint.blog/
