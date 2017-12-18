@@ -142,6 +142,16 @@ html,body {
   font-size: 16px;
   color: #747474;
 }
+input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 100%;
+}
 .top-nav{
   background: #1CD5B5;
   padding: 1.5em 0;
