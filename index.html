@@ -64,22 +64,14 @@ jQuery(document).ready(function($) {
 					<div class="header-middle-logo">
 						<a href="index.html">SportsJoint</a>
 					</div>
-					<div class="header-middle-right">
-						<div class="phone">
-							<span> </span>
-							<ul>
-								<li class="gray">Mobile</li>
-								<li>9999 999 999</li>
-								<li>9999 999 999</li>
-							</ul>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="location">
-							<span> </span>
-							<ul>
-								<li class="gray">Address<li>
-								<li>BH-3</li>
-								<li>The LNMIIT</li>
+					<div class="header-middle-right"  >
+						<div id="sports">	
+							<ul >
+								<li><a href="">FOOTBALL</a></li>
+								<li><a href="">CRICKET</a></li>
+								<li><a href="">TENNIS</a></li>
+								<li><a href="">BADMINTON</a></li>
+								<li><a href="">F1</a></li>
 							</ul>
 						</div>
 						<div class="clearfix"> </div>
@@ -161,27 +153,42 @@ jQuery(document).ready(function($) {
 			<!-- container -->
 			<div class="container" ng-controller="MainController">
 				<div class="news-info" >
-					<h3>Our News</h3>
+					<h3>LATEST NEWS</h3>
 				</div>
 				<div class="news-grids">
-					<div class="col-md-4 news-grids" ng-repeat="article in articles">
-					<a href="{{article.link}}">
-						<div class="news-grid news-grid-img">
-							<img ng-src="{{ article.cover}}">
-						</div>
-						<div class="news-grid-info">
-							<h1>{{article.title}}</h1>
-							<h2>{{article.author}}</h2>
-							<p>{{article.pubdate | date}}</p>
-							
-						</div>
-						</a>
-					</div>
 					
-					<div class="clearfix"> </div>
+						<!-- Large Grids Start-->
+					<div id="largeGrids" class="col-md-4" ng-repeat="article in largeArticles">
+						<div id="large-grid" class="col-md-4">
+						<a href="{{article.link}}">
+							<div class= "large-grid-img">
+								<img ng-src="{{ article.cover}}">
+							</div>
+							<div class="large-grid-info">
+								<h1>{{article.title}}</h1>
+								<h2>{{article.author}}</h2>
+								<p>{{article.pubdate | date}}</p>
+							</div>
+						</a>	
+						</div>
+					</div>
+						<!-- Large Grids End-->
+						<!--Small Grid Starts-->
+					<div id="smallGrids" class="col-md-4" ng-repeat="article in smallArticles">
+						<div id="smallGrid" class="col-md-12">
+						<a href="{{article.link}}">
+							<div class="small-grid-img" >
+								<img ng-src="{{ article.cover}}">
+							</div>
+							<div class="small-grid-info">
+								<h1>{{article.title}}</h1>
+								<p>{{article.pubdate | date}}</p>
+							</div>
+						</a>	
+						</div>
+					</div>
+					<!--Small Grid Ends-->
 				</div>
-				
-				
 			</div>
 			<!-- //container -->
 		</div>
