@@ -189,13 +189,13 @@ display: inline-block;
 /*-- banner --*/
 .banner{
   background: url(../images/s1.jpg) no-repeat 0px -134px;
-  min-height: 640px;
+  min-height: 400px;
   background-size: cover;
   position: relative;
 }
 .banner-img{
   background: url(../images/8.jpg) no-repeat 0px -24px;
-  min-height: 640px;
+  min-height: 400px;
   background-size: cover;
   position: relative;
 }
