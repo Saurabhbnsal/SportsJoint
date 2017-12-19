@@ -5,25 +5,7 @@
 <title>SportsJoint || Sports Blog & Website</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	
-<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCT217lHal8rtvmSwszmntXW76jdb7UwRM",
-    authDomain: "sportsjoint-6edf9.firebaseapp.com",
-    databaseURL: "https://sportsjoint-6edf9.firebaseio.com",
-    projectId: "sportsjoint-6edf9",
-    storageBucket: "",
-    messagingSenderId: "336945380188"
-  };
-  firebase.initializeApp(config);
-</script>
-	
-	
-<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-	<script src="js/parallax.js">
-	</script>
+
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
@@ -32,6 +14,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- js -->
+<!--Angular-->
+<script src="js/angular.min.js"></script>
 <!-- start-smoth-scrolling -->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
@@ -45,7 +29,11 @@ jQuery(document).ready(function($) {
 </script>
 <!-- start-smoth-scrolling -->
 </head>
-	<body>
+	<body ng-app="myApp">
+	<!--controllers-->
+		<script src="js/controllers/MainController.js">
+	<!--modules-->	
+		<script src="js/main.js"></script>
 		<!-- header -->
 		<div class="header">
 			<div class="header-top">
@@ -167,6 +155,38 @@ jQuery(document).ready(function($) {
 					</div>
 		</div>
 		<!-- //banner -->
+		
+		<!-- news -->
+		<div class="news">
+			<!-- container -->
+			<div class="container" ng-controller="MainController">
+				<div class="news-info" >
+					<h3>Our News</h3>
+				</div>
+				<div class="news-grids">
+					<div class="col-md-4 news-grids" ng-repeat="article in articles">
+					<a href="{{article.link}}">
+						<div class="news-grid news-grid-img">
+							<img ng-src="{{ article.cover}}">
+						</div>
+						<div class="news-grid-info">
+							<h1>{{article.title}}</h1>
+							<h2>{{article.author}}</h2>
+							<p>{{article.pubdate | date}}</p>
+							
+						</div>
+						</a>
+					</div>
+					
+					<div class="clearfix"> </div>
+				</div>
+				
+				
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //news -->
+		
 		<!-- how -->
 		<div class="how">
 			<!-- container -->
@@ -272,90 +292,10 @@ jQuery(document).ready(function($) {
 			<!-- //container -->
 		</div>
 		<!-- //how -->
-		<!-- news -->
-		<div class="news">
-			<!-- container -->
-			<div class="container">
-				<div class="news-info">
-					<h3>Our News</h3>
-				</div>
-				<div class="news-grids">
-					<div class="col-md-4 news-grid">
-						<div class="news-grid-left news-grid-left-img">
-							<p>11 / 09</p>
-						</div>
-						<div class="news-grid-left-info">
-							<h5>Lorem Ipsum is simply dummy</h5>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-						</div>
-					</div>
-					<div class="col-md-4 news-grid">
-						<div class="news-grid-left news-grid-middle">
-							<p>11 / 09</p>
-						</div>
-						<div class="news-grid-left-info">
-							<h5>Lorem Ipsum is simply dummy</h5>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-						</div>
-					</div>
-					<div class="col-md-4 news-grid">
-						<div class="news-grid-left news-grid-right">
-							<p>11 / 09</p>
-						</div>
-						<div class="news-grid-left-info">
-							<h5>Lorem Ipsum is simply dummy</h5>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-						</div>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-			<!-- //container -->
-		</div>
-		<!-- //news -->
 		<!-- banner-bottom -->
 		<div class="banner-bottom">
 			<!-- container -->
 			<div class="container">
-				<div class="banner-bottom-info">
-					<h3>Expert Opinion</h3>
-				</div>
-				<div class="banner-bottom-grids">
-					<div class="col-md-4 banner-bottom-grid">
-						<span>Mortyn tim<label>[ 24 articles ]</label></span>
-						<img src="images/c3.jpg" alt="" />
-						<h4>Marty luthar Tim Break</h4>	
-						<p>Lorem Ipsum is simply dummy text 
-							of the printing and typesetting industry.
-							Lorem Ipsum has been the industry's
-							dummy text ever since the 1500s,
-							including versions of Lorem Ipsum.
-						</p>
-					</div>
-					<div class="col-md-4 banner-bottom-grid">
-						<span>Mortyn tim<label>[ 24 articles ]</label></span>
-						<img src="images/c1.jpg" alt="" />
-						<h4>Marty luthar Tim Break</h4>	
-						<p>Lorem Ipsum is simply dummy text 
-							of the printing and typesetting industry.
-							Lorem Ipsum has been the industry's
-							dummy text ever since the 1500s,
-							including versions of Lorem Ipsum.
-						</p>
-					</div>
-					<div class="col-md-4 banner-bottom-grid">
-						<span>Mortyn tim<label>[ 24 articles ]</label></span>
-						<img src="images/c2.jpg" alt="" />
-						<h4>Marty luthar Tim Break</h4>	
-						<p>Lorem Ipsum is simply dummy text 
-							of the printing and typesetting industry.
-							Lorem Ipsum has been the industry's
-							dummy text ever since the 1500s,
-							including versions of Lorem Ipsum.
-						</p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
 			</div>
 			<!-- //container -->
 		</div>
@@ -386,10 +326,10 @@ jQuery(document).ready(function($) {
 								<a href="index.html">SportsJoint</a>
 								<div class="footer-left">
 									<ul>
-										<li><a class="facebook" href="https://www.facebook.com/sportsjoint"></a></li>
-										<li><a class="twitter" href="https://twitter.com/Sports_Joint"></a></li>
-										<li><a class="linked-in" href="https://www.linkedin.com/in/sports-joint-a259aa146/"></a></li>
-										<li><a class="you-tube" href="https://www.youtube.com/channel/UCEO-NSwm15RPSEMIlFPEARA"></a></li>
+										<li><a class="facebook" href="#"></a></li>
+										<li><a class="twitter" href="#"></a></li>
+										<li><a class="linked-in" href="#"></a></li>
+										<li><a class="you-tube" href="#"></a></li>
 									</ul>
 								</div>
 							</div>
@@ -423,5 +363,7 @@ jQuery(document).ready(function($) {
 								</script>
 									<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 	<!-- content-Get-in-touch -->
+	
+	
 	</body>
 </html>
